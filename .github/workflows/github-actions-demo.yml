@@ -7,3 +7,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: echo "Hello World!"
+      - run: echo "This job is automatically triggered by a ${{ github.event_name }} event."
+      - run: echo "This job is now running on ${{ runner.os }} server hosted by Guthub."
+      - run: echo "The name of your branch is ${{ github.ref }} and you repository is ${{ github.repository }}"
+      - name: Check out repository code
+        uses: action/checkout@v2
+      - run: echo "The ${{ github.repository }} repository has been cloned to the runner."
+      - name: List files in the repository
