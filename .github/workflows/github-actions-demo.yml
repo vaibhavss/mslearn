@@ -17,4 +17,4 @@ jobs:
         run: |
           ls ${{ github.workspace }}
           tree
-      - run: echo "This job's status is ${{ job.status }}."
+      - run: echo "This Job's status is ${{ job.status }}."
